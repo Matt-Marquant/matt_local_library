@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="1" failures="0" hostname="LAPTOP-KL21T9AV" name="pytest" skipped="0" tests="1" time="1.126" timestamp="2020-07-14T16:23:16.108794"><testcase classname="" file="catalog/tests/test_views.py" name="catalog.tests.test_views" time="0.000"><error message="collection failure">catalog\tests\test_views.py:4: in &lt;module&gt;
+    from catalog.models import Author
+catalog\models.py:2: in &lt;module&gt;
+    from django.contrib.auth.models import User
+env\lib\site-packages\django\contrib\auth\models.py:2: in &lt;module&gt;
+    from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+env\lib\site-packages\django\contrib\auth\base_user.py:47: in &lt;module&gt;
+    class AbstractBaseUser(models.Model):
+env\lib\site-packages\django\db\models\base.py:103: in __new__
+    app_config = apps.get_containing_app_config(module)
+env\lib\site-packages\django\apps\registry.py:252: in get_containing_app_config
+    self.check_apps_ready()
+env\lib\site-packages\django\apps\registry.py:135: in check_apps_ready
+    raise AppRegistryNotReady(&quot;Apps aren&apos;t loaded yet.&quot;)
+E   django.core.exceptions.AppRegistryNotReady: Apps aren&apos;t loaded yet.</error></testcase></testsuite></testsuites>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="1" hostname="LAPTOP-KL21T9AV" name="pytest" skipped="0" tests="5" time="0.871" timestamp="2020-07-14T12:05:27.236156"><testcase classname="catalog.tests.test_forms.SimpleTest" file="catalog\tests\test_forms.py" line="21" name="test_basic_addition" time="0.162"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="catalog.tests.test_models.YourTestClass" file="catalog\tests\test_models.py" line="20" name="test_false_is_false" time="0.004"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+setUpTestData: Run once to set up non-modified data for all class methods.
+setUp: Run once for every test method to setup clean data.
+Method: test_false_is_false.
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="catalog.tests.test_models.YourTestClass" file="catalog\tests\test_models.py" line="24" name="test_false_is_true" time="0.001"><failure message="AssertionError: False is not true">self = &lt;catalog.tests.test_models.YourTestClass testMethod=test_false_is_true&gt;
+
+    def test_false_is_true(self):
+        print(&quot;Method: test_false_is_true.&quot;)
+&gt;       self.assertTrue(False)
+E       AssertionError: False is not true
+
+catalog\tests\test_models.py:27: AssertionError</failure><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+setUp: Run once for every test method to setup clean data.
+Method: test_false_is_true.
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="catalog.tests.test_models.YourTestClass" file="catalog\tests\test_models.py" line="28" name="test_one_plus_one_equals_two" time="0.002"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+setUp: Run once for every test method to setup clean data.
+Method: test_one_plus_one_equals_two.
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="catalog.tests.test_views.SimpleTest" file="catalog\tests\test_views.py" line="21" name="test_basic_addition" time="0.004"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase></testsuite></testsuites>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="1" hostname="LAPTOP-KL21T9AV" name="pytest" skipped="0" tests="4" time="0.817" timestamp="2020-07-14T09:27:58.028919"><testcase classname="catalog.tests.test_models.SimpleTest" file="catalog\tests\test_models.py" line="21" name="test_basic_addition" time="0.172"></testcase><testcase classname="catalog.tests.test_models.YourTestClass" file="catalog\tests\test_models.py" line="37" name="test_false_is_false" time="0.003"></testcase><testcase classname="catalog.tests.test_models.YourTestClass" file="catalog\tests\test_models.py" line="41" name="test_false_is_true" time="0.002"><failure message="AssertionError: False is not true">self = &lt;catalog.tests.test_models.YourTestClass testMethod=test_false_is_true&gt;
+
+    def test_false_is_true(self):
+        print(&quot;Method: test_false_is_true.&quot;)
+&gt;       self.assertTrue(False)
+E       AssertionError: False is not true
+
+catalog\tests\test_models.py:44: AssertionError</failure></testcase><testcase classname="catalog.tests.test_models.YourTestClass" file="catalog\tests\test_models.py" line="45" name="test_one_plus_one_equals_two" time="0.001"></testcase></testsuite></testsuites>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="3" hostname="LAPTOP-KL21T9AV" name="pytest" skipped="0" tests="16" time="3.870" timestamp="2020-07-15T12:07:48.013279"><testcase classname="catalog.tests.test_forms.RenewBookFormTest" file="catalog\tests\test_forms.py" line="12" name="test_renew_form_date_field_help_text" time="0.023"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="catalog.tests.test_forms.RenewBookFormTest" file="catalog\tests\test_forms.py" line="8" name="test_renew_form_date_field_label" time="0.001"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="catalog.tests.test_forms.RenewBookFormTest" file="catalog\tests\test_forms.py" line="16" name="test_renew_form_date_in_past" time="0.002"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="catalog.tests.test_forms.RenewBookFormTest" file="catalog\tests\test_forms.py" line="31" name="test_renew_form_date_max" time="2.352"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="catalog.tests.test_forms.RenewBookFormTest" file="catalog\tests\test_forms.py" line="26" name="test_renew_form_date_today" time="0.002"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="catalog.tests.test_forms.RenewBookFormTest" file="catalog\tests\test_forms.py" line="21" name="test_renew_form_date_too_far_in_future" time="0.003"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="catalog.tests.test_models.AuthorModelTest" file="catalog\tests\test_models.py" line="23" name="test_date_of_death_label" time="0.012"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="catalog.tests.test_models.AuthorModelTest" file="catalog\tests\test_models.py" line="18" name="test_first_name_label" time="0.003"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="catalog.tests.test_models.AuthorModelTest" file="catalog\tests\test_models.py" line="28" name="test_first_name_max_length" time="0.003"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="catalog.tests.test_models.AuthorModelTest" file="catalog\tests\test_models.py" line="38" name="test_get_absolute_url" time="0.037"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="catalog.tests.test_models.AuthorModelTest" file="catalog\tests\test_models.py" line="33" name="test_object_name_is_last_name_comma_first_name" time="0.006"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="catalog.tests.test_views.AuthorListViewTest" file="catalog\tests\test_views.py" line="39" name="test_lists_all_authors" time="0.303"><failure message="TypeError: argument of type &apos;NoneType&apos; is not iterable">self = &lt;catalog.tests.test_views.AuthorListViewTest testMethod=test_lists_all_authors&gt;
+
+    def test_lists_all_authors(self):
+        # Get second page and confirm it has (exactly) the remaining 3 items
+        response = self.client.get(reverse(&apos;authors&apos;)+&apos;?page=2&apos;)
+        self.assertEqual(response.status_code, 200)
+&gt;       self.assertTrue(&apos;is_paginated&apos; in response.context)
+E       TypeError: argument of type &apos;NoneType&apos; is not iterable
+
+catalog\tests\test_views.py:44: TypeError</failure><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="catalog.tests.test_views.AuthorListViewTest" file="catalog\tests\test_views.py" line="32" name="test_pagination_is_ten" time="0.009"><failure message="TypeError: argument of type &apos;NoneType&apos; is not iterable">self = &lt;catalog.tests.test_views.AuthorListViewTest testMethod=test_pagination_is_ten&gt;
+
+    def test_pagination_is_ten(self):
+        response = self.client.get(reverse(&apos;authors&apos;))
+        self.assertEqual(response.status_code, 200)
+&gt;       self.assertTrue(&apos;is_paginated&apos; in response.context)
+E       TypeError: argument of type &apos;NoneType&apos; is not iterable
+
+catalog\tests\test_views.py:36: TypeError</failure><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="catalog.tests.test_views.AuthorListViewTest" file="catalog\tests\test_views.py" line="23" name="test_view_url_accessible_by_name" time="0.011"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="catalog.tests.test_views.AuthorListViewTest" file="catalog\tests\test_views.py" line="19" name="test_view_url_exists_at_desired_location" time="0.011"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="catalog.tests.test_views.AuthorListViewTest" file="catalog\tests\test_views.py" line="27" name="test_view_uses_correct_template" time="0.003"><failure message="django.urls.exceptions.NoReverseMatch: Reverse for &apos;/authors/&apos; not found. &apos;/authors/&apos; is not a valid view function or pattern name.">self = &lt;catalog.tests.test_views.AuthorListViewTest testMethod=test_view_uses_correct_template&gt;
+
+    def test_view_uses_correct_template(self):
+&gt;       response = self.client.get(reverse(&apos;/authors/&apos;))
+
+catalog\tests\test_views.py:29: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+env\lib\site-packages\django\urls\base.py:90: in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;URLResolver &apos;locallibrary.urls&apos; (None:None) &apos;^/&apos;&gt;
+lookup_view = &apos;/authors/&apos;, _prefix = &apos;/&apos;, args = (), kwargs = {}
+possibilities = []
+
+    def _reverse_with_prefix(self, lookup_view, _prefix, *args, **kwargs):
+        if args and kwargs:
+            raise ValueError(&quot;Don&apos;t mix *args and **kwargs in call to reverse()!&quot;)
+    
+        if not self._populated:
+            self._populate()
+    
+        possibilities = self.reverse_dict.getlist(lookup_view)
+    
+        for possibility, pattern, defaults, converters in possibilities:
+            for result, params in possibility:
+                if args:
+                    if len(args) != len(params):
+                        continue
+                    candidate_subs = dict(zip(params, args))
+                else:
+                    if set(kwargs).symmetric_difference(params).difference(defaults):
+                        continue
+                    if any(kwargs.get(k, v) != v for k, v in defaults.items()):
+                        continue
+                    candidate_subs = kwargs
+                # Convert the candidate subs to text using Converter.to_url().
+                text_candidate_subs = {}
+                for k, v in candidate_subs.items():
+                    if k in converters:
+                        text_candidate_subs[k] = converters[k].to_url(v)
+                    else:
+                        text_candidate_subs[k] = str(v)
+                # WSGI provides decoded URLs, without %xx escapes, and the URL
+                # resolver operates on such URLs. First substitute arguments
+                # without quoting to build a decoded URL and look for a match.
+                # Then, if we have a match, redo the substitution with quoted
+                # arguments in order to return a properly encoded URL.
+                candidate_pat = _prefix.replace(&apos;%&apos;, &apos;%%&apos;) + result
+                if re.search(&apos;^%s%s&apos; % (re.escape(_prefix), pattern), candidate_pat % text_candidate_subs):
+                    # safe characters from `pchar` definition of RFC 3986
+                    url = quote(candidate_pat % text_candidate_subs, safe=RFC3986_SUBDELIMS + &apos;/~:@&apos;)
+                    # Don&apos;t allow construction of scheme relative urls.
+                    return escape_leading_slashes(url)
+        # lookup_view can be URL name or callable, but callables are not
+        # friendly in error messages.
+        m = getattr(lookup_view, &apos;__module__&apos;, None)
+        n = getattr(lookup_view, &apos;__name__&apos;, None)
+        if m is not None and n is not None:
+            lookup_view_s = &quot;%s.%s&quot; % (m, n)
+        else:
+            lookup_view_s = lookup_view
+    
+        patterns = [pattern for (_, pattern, _, _) in possibilities]
+        if patterns:
+            if args:
+                arg_msg = &quot;arguments &apos;%s&apos;&quot; % (args,)
+            elif kwargs:
+                arg_msg = &quot;keyword arguments &apos;%s&apos;&quot; % (kwargs,)
+            else:
+                arg_msg = &quot;no arguments&quot;
+            msg = (
+                &quot;Reverse for &apos;%s&apos; with %s not found. %d pattern(s) tried: %s&quot; %
+                (lookup_view_s, arg_msg, len(patterns), patterns)
+            )
+        else:
+            msg = (
+                &quot;Reverse for &apos;%(view)s&apos; not found. &apos;%(view)s&apos; is not &quot;
+                &quot;a valid view function or pattern name.&quot; % {&apos;view&apos;: lookup_view_s}
+            )
+&gt;       raise NoReverseMatch(msg)
+E       django.urls.exceptions.NoReverseMatch: Reverse for &apos;/authors/&apos; not found. &apos;/authors/&apos; is not a valid view function or pattern name.
+
+env\lib\site-packages\django\urls\resolvers.py:673: NoReverseMatch</failure><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase></testsuite></testsuites>

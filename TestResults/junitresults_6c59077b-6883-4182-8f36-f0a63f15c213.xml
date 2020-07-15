@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="5" hostname="LAPTOP-KL21T9AV" name="pytest" skipped="0" tests="16" time="1.294" timestamp="2020-07-14T16:29:40.533939"><testcase classname="catalog.tests.test_forms.RenewBookFormTest" file="catalog\tests\test_forms.py" line="12" name="test_renew_form_date_field_help_text" time="0.003"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="catalog.tests.test_forms.RenewBookFormTest" file="catalog\tests\test_forms.py" line="8" name="test_renew_form_date_field_label" time="0.001"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="catalog.tests.test_forms.RenewBookFormTest" file="catalog\tests\test_forms.py" line="16" name="test_renew_form_date_in_past" time="0.001"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="catalog.tests.test_forms.RenewBookFormTest" file="catalog\tests\test_forms.py" line="31" name="test_renew_form_date_max" time="0.096"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="catalog.tests.test_forms.RenewBookFormTest" file="catalog\tests\test_forms.py" line="26" name="test_renew_form_date_today" time="0.003"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="catalog.tests.test_forms.RenewBookFormTest" file="catalog\tests\test_forms.py" line="21" name="test_renew_form_date_too_far_in_future" time="0.000"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="catalog.tests.test_models.AuthorModelTest" file="catalog\tests\test_models.py" line="23" name="test_date_of_death_label" time="0.010"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="catalog.tests.test_models.AuthorModelTest" file="catalog\tests\test_models.py" line="18" name="test_first_name_label" time="0.002"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="catalog.tests.test_models.AuthorModelTest" file="catalog\tests\test_models.py" line="28" name="test_first_name_max_length" time="0.002"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="catalog.tests.test_models.AuthorModelTest" file="catalog\tests\test_models.py" line="38" name="test_get_absolute_url" time="0.028"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="catalog.tests.test_models.AuthorModelTest" file="catalog\tests\test_models.py" line="33" name="test_object_name_is_last_name_comma_first_name" time="0.003"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="catalog.tests.test_views.AuthorListViewTest" file="catalog\tests\test_views.py" line="37" name="test_lists_all_authors" time="0.062"><failure message="AssertionError: 400 != 200">self = &lt;catalog.tests.test_views.AuthorListViewTest testMethod=test_lists_all_authors&gt;
+
+    def test_lists_all_authors(self):
+        # Get second page and confirm it has (exactly) remaining 3 items
+        response = self.client.get(reverse(&apos;authors&apos;)+&apos;?page=2&apos;)
+&gt;       self.assertEqual(response.status_code, 200)
+E       AssertionError: 400 != 200
+
+catalog\tests\test_views.py:41: AssertionError</failure><system-out>--------------------------------- Captured Log ---------------------------------
+ERROR    django.security.DisallowedHost:exception.py:77 Invalid HTTP_HOST header: &apos;testserver&apos;. You may need to add &apos;testserver&apos; to ALLOWED_HOSTS.
+WARNING  django.request:log.py:228 Bad Request: /catalog/authors/
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+Invalid HTTP_HOST header: &apos;testserver&apos;. You may need to add &apos;testserver&apos; to ALLOWED_HOSTS.
+Bad Request: /catalog/authors/
+
+</system-err></testcase><testcase classname="catalog.tests.test_views.AuthorListViewTest" file="catalog\tests\test_views.py" line="30" name="test_pagination_is_ten" time="0.030"><failure message="AssertionError: 400 != 200">self = &lt;catalog.tests.test_views.AuthorListViewTest testMethod=test_pagination_is_ten&gt;
+
+    def test_pagination_is_ten(self):
+        response = self.client.get(reverse(&apos;authors&apos;))
+&gt;       self.assertEqual(response.status_code, 200)
+E       AssertionError: 400 != 200
+
+catalog\tests\test_views.py:33: AssertionError</failure><system-out>--------------------------------- Captured Log ---------------------------------
+ERROR    django.security.DisallowedHost:exception.py:77 Invalid HTTP_HOST header: &apos;testserver&apos;. You may need to add &apos;testserver&apos; to ALLOWED_HOSTS.
+WARNING  django.request:log.py:228 Bad Request: /catalog/authors/
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+Invalid HTTP_HOST header: &apos;testserver&apos;. You may need to add &apos;testserver&apos; to ALLOWED_HOSTS.
+Bad Request: /catalog/authors/
+
+</system-err></testcase><testcase classname="catalog.tests.test_views.AuthorListViewTest" file="catalog\tests\test_views.py" line="21" name="test_view_url_accessible_by_name" time="0.034"><failure message="AssertionError: 400 != 200">self = &lt;catalog.tests.test_views.AuthorListViewTest testMethod=test_view_url_accessible_by_name&gt;
+
+    def test_view_url_accessible_by_name(self):
+        response = self.client.get(reverse(&apos;authors&apos;))
+&gt;       self.assertEqual(response.status_code, 200)
+E       AssertionError: 400 != 200
+
+catalog\tests\test_views.py:24: AssertionError</failure><system-out>--------------------------------- Captured Log ---------------------------------
+ERROR    django.security.DisallowedHost:exception.py:77 Invalid HTTP_HOST header: &apos;testserver&apos;. You may need to add &apos;testserver&apos; to ALLOWED_HOSTS.
+WARNING  django.request:log.py:228 Bad Request: /catalog/authors/
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+Invalid HTTP_HOST header: &apos;testserver&apos;. You may need to add &apos;testserver&apos; to ALLOWED_HOSTS.
+Bad Request: /catalog/authors/
+
+</system-err></testcase><testcase classname="catalog.tests.test_views.AuthorListViewTest" file="catalog\tests\test_views.py" line="17" name="test_view_url_exists_at_desired_location" time="0.031"><failure message="AssertionError: 400 != 200">self = &lt;catalog.tests.test_views.AuthorListViewTest testMethod=test_view_url_exists_at_desired_location&gt;
+
+    def test_view_url_exists_at_desired_location(self):
+        response = self.client.get(&apos;/catalog/authors/&apos;)
+&gt;       self.assertEqual(response.status_code, 200)
+E       AssertionError: 400 != 200
+
+catalog\tests\test_views.py:20: AssertionError</failure><system-out>--------------------------------- Captured Log ---------------------------------
+ERROR    django.security.DisallowedHost:exception.py:77 Invalid HTTP_HOST header: &apos;testserver&apos;. You may need to add &apos;testserver&apos; to ALLOWED_HOSTS.
+WARNING  django.request:log.py:228 Bad Request: /catalog/authors/
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+Invalid HTTP_HOST header: &apos;testserver&apos;. You may need to add &apos;testserver&apos; to ALLOWED_HOSTS.
+Bad Request: /catalog/authors/
+
+</system-err></testcase><testcase classname="catalog.tests.test_views.AuthorListViewTest" file="catalog\tests\test_views.py" line="25" name="test_view_uses_correct_template" time="0.032"><failure message="AssertionError: 400 != 200">self = &lt;catalog.tests.test_views.AuthorListViewTest testMethod=test_view_uses_correct_template&gt;
+
+    def test_view_uses_correct_template(self):
+        response = self.client.get(reverse(&apos;authors&apos;))
+&gt;       self.assertEqual(response.status_code, 200)
+E       AssertionError: 400 != 200
+
+catalog\tests\test_views.py:28: AssertionError</failure><system-out>--------------------------------- Captured Log ---------------------------------
+ERROR    django.security.DisallowedHost:exception.py:77 Invalid HTTP_HOST header: &apos;testserver&apos;. You may need to add &apos;testserver&apos; to ALLOWED_HOSTS.
+WARNING  django.request:log.py:228 Bad Request: /catalog/authors/
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+Invalid HTTP_HOST header: &apos;testserver&apos;. You may need to add &apos;testserver&apos; to ALLOWED_HOSTS.
+Bad Request: /catalog/authors/
+
+</system-err></testcase></testsuite></testsuites>
